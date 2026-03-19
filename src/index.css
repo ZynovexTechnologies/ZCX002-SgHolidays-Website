@@ -876,7 +876,7 @@ a {
 
 @media (max-width: 600px) {
   .image-slider {
-    border-radius: 20px;
+    border-radius: 0;
   }
 
   .nav-shell {
