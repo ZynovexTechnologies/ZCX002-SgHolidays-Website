@@ -680,6 +680,12 @@ function App() {
         <p className="footer-bottom">
           Copyright 2026 {brandName}. All rights reserved.
         </p>
+        <p className="footer-powered">
+          Powered by{" "}
+          <a href="https://zynovex.in" target="_blank" rel="noreferrer">
+            Zynovex Technologies
+          </a>
+        </p>
       </footer>
 
       <a className="whatsapp-float" href={contactWhatsappHref} target="_blank" rel="noreferrer">

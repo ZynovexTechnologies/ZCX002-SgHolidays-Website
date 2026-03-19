@@ -683,6 +683,17 @@ a {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-powered {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-powered a {
+  font-weight: 600;
+}
+
 .whatsapp-float {
   position: fixed;
   right: 24px;
