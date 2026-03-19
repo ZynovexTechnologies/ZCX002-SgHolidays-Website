@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import ImageSlider from "./components/ImageSlider.jsx";
 import SectionHeader from "./components/SectionHeader.jsx";
 
@@ -11,6 +12,14 @@ const contactEmailHref = `mailto:${contactEmail}`;
 const contactPhoneHref = `tel:+${contactPhoneDigits}`;
 const contactWhatsappHref = `https://wa.me/${contactPhoneDigits}`;
 const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapLocation)}&output=embed`;
+
+const primaryNavLinks = [
+  { label: "Home", href: "#home" },
+  { label: "Rooms", href: "#rooms" },
+  { label: "Safari Rides", href: "#safari" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Contact", href: "#contact" },
+];
 
 const heroImages = [
   {
@@ -275,23 +284,71 @@ function ContactIcon({ type }) {
 }
 
 function App() {
+  const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 860) {
+        setNavOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  const closeNav = () => setNavOpen(false);
+
   return (
     <div className="page">
       <header className="site-header">
         <div className="container nav-shell">
-          <a className="logo" href="#home">
+          <a className="logo" href="#home" onClick={closeNav}>
             {brandName}
           </a>
-          <nav className="nav-links">
-            <a href="#home">Home</a>
-            <a href="#rooms">Rooms</a>
-            <a href="#safari">Safari Rides</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
+          <nav className="nav-links nav-links-desktop" aria-label="Primary">
+            {primaryNavLinks.map((link) => (
+              <a key={link.href} href={link.href} onClick={closeNav}>
+                {link.label}
+              </a>
+            ))}
           </nav>
-          <a className="btn btn-ghost" href="#contact">
+          <a className="btn btn-ghost nav-cta-desktop" href="#contact" onClick={closeNav}>
             Book Stay
           </a>
+          <button
+            type="button"
+            className="nav-toggle"
+            aria-expanded={navOpen}
+            aria-controls="mobile-navigation"
+            aria-label={navOpen ? "Close navigation menu" : "Open navigation menu"}
+            onClick={() => setNavOpen((prev) => !prev)}
+          >
+            <span className="nav-toggle-lines" aria-hidden="true">
+              <span className="nav-toggle-line" />
+              <span className="nav-toggle-line" />
+              <span className="nav-toggle-line" />
+            </span>
+            <span className="nav-toggle-text">{navOpen ? "Close" : "Menu"}</span>
+          </button>
+        </div>
+        <div
+          id="mobile-navigation"
+          className={`mobile-nav-panel ${navOpen ? "is-open" : ""}`}
+          aria-hidden={!navOpen}
+        >
+          <div className="container mobile-nav-inner">
+            <nav className="mobile-nav-links" aria-label="Mobile primary">
+              {primaryNavLinks.map((link) => (
+                <a key={link.href} href={link.href} onClick={closeNav}>
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            <a className="btn btn-ghost mobile-nav-cta" href="#contact" onClick={closeNav}>
+              Book Stay
+            </a>
+          </div>
         </div>
       </header>
 
