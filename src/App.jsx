@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FaWhatsapp, FaInstagram, FaXTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
+import { FiMenu, FiX, FiSun, FiMoon, FiMonitor } from "react-icons/fi";
 import ImageSlider from "./components/ImageSlider.jsx";
 import SectionHeader from "./components/SectionHeader.jsx";
 
@@ -262,22 +264,7 @@ function ContactIcon({ type }) {
         </svg>
       );
     case "whatsapp":
-      return (
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M21 12a8.5 8.5 0 0 1-12.5 7.5L3 21l1.7-5.4A8.5 8.5 0 1 1 21 12Z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M9.3 9.1c.3-.6.6-.7 1-.7.3 0 .5 0 .7 0 .2 0 .5 0 .7.5.2.5.8 1.7.9 1.8.1.1.1.3 0 .5-.1.2-.2.3-.3.5-.1.1-.2.2-.4.4-.1.1-.3.2-.1.5.2.3.7 1.2 1.6 2 .9.8 1.6 1.1 1.9 1.2.3.1.4.1.6-.1.2-.2.6-.7.8-1 .2-.3.3-.2.5-.1.2.1 1.4.7 1.6.8.2.1.4.2.4.3 0 .1 0 .7-.3 1.4-.3.7-1.6 1.3-2.2 1.4-.6.1-1.2.1-2-.1-.8-.2-1.9-.7-3.2-1.8-1.4-1.1-2.3-2.5-2.6-3-.3-.6-.6-1.2-.6-1.8 0-.6.2-1.2.5-1.7Z"
-            fill="currentColor"
-          />
-        </svg>
-      );
+      return <FaWhatsapp size="100%" color="currentColor" />;
     default:
       return null;
   }
@@ -285,6 +272,43 @@ function ContactIcon({ type }) {
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "system");
+
+  useEffect(() => {
+    const applyTheme = (currentTheme) => {
+      const isDark =
+        currentTheme === "dark" ||
+        (currentTheme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      
+      if (isDark) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    };
+
+    applyTheme(theme);
+    localStorage.setItem("theme", theme);
+
+    if (theme === "system") {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      const listener = () => applyTheme("system");
+      mediaQuery.addEventListener("change", listener);
+      return () => mediaQuery.removeEventListener("change", listener);
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    if (theme === "light") setTheme("dark");
+    else if (theme === "dark") setTheme("system");
+    else setTheme("light");
+  };
+
+  const getThemeIcon = () => {
+    if (theme === "light") return <FiSun size={20} />;
+    if (theme === "dark") return <FiMoon size={20} />;
+    return <FiMonitor size={20} />;
+  };
 
   useEffect(() => {
     const onResize = () => {
@@ -324,12 +348,7 @@ function App() {
             aria-label={navOpen ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setNavOpen((prev) => !prev)}
           >
-            <span className="nav-toggle-lines" aria-hidden="true">
-              <span className="nav-toggle-line" />
-              <span className="nav-toggle-line" />
-              <span className="nav-toggle-line" />
-            </span>
-            <span className="nav-toggle-text">{navOpen ? "Close" : "Menu"}</span>
+            {navOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
         <div
@@ -345,9 +364,20 @@ function App() {
                 </a>
               ))}
             </nav>
-            <a className="btn btn-ghost mobile-nav-cta" href="#contact" onClick={closeNav}>
-              Book Stay
-            </a>
+            <div className="mobile-nav-actions">
+              <button
+                type="button"
+                className="theme-toggle mobile-theme-toggle"
+                onClick={toggleTheme}
+                aria-label={`Switch theme (current: ${theme})`}
+              >
+                {getThemeIcon()}
+                <span>{theme.charAt(0).toUpperCase() + theme.slice(1)} Theme</span>
+              </button>
+              <a className="btn btn-ghost mobile-nav-cta" href="#contact" onClick={closeNav}>
+                Book Stay
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -728,10 +758,35 @@ function App() {
             <p>{contactPhoneDisplay}</p>
           </div>
           <div>
-            <p className="footer-title">Instagram</p>
-            <a href="https://instagram.com/verdantmajesty" target="_blank" rel="noreferrer">
-              Instagram
-            </a>
+            <p className="footer-title">Socials</p>
+            <div className="footer-socials">
+              <a href="#" aria-label="Instagram">
+                <FaInstagram size={20} />
+              </a>
+              <a href="#" aria-label="X (Twitter)">
+                <FaXTwitter size={20} />
+              </a>
+              <a href="#" aria-label="Facebook">
+                <FaFacebookF size={20} />
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <FaLinkedinIn size={20} />
+              </a>
+              <a href="#" aria-label="WhatsApp">
+                <FaWhatsapp size={20} />
+              </a>
+            </div>
+            <div className="footer-theme-control">
+              <button
+                type="button"
+                className="theme-toggle footer-theme-toggle"
+                onClick={toggleTheme}
+                aria-label={`Switch theme (current: ${theme})`}
+              >
+                {getThemeIcon()}
+                <span>{theme.charAt(0).toUpperCase() + theme.slice(1)} Mode</span>
+              </button>
+            </div>
           </div>
         </div>
         <p className="footer-bottom">
@@ -745,8 +800,8 @@ function App() {
         </p>
       </footer>
 
-      <a className="whatsapp-float" href={contactWhatsappHref} target="_blank" rel="noreferrer">
-        WhatsApp
+      <a className="whatsapp-float" href={contactWhatsappHref} target="_blank" rel="noreferrer" aria-label="Chat with us on WhatsApp">
+        <FaWhatsapp size={28} />
       </a>
     </div>
   );
