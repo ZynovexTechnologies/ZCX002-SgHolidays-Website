@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Sitemap is added during the production build when siteConfig.siteUrl is configured.

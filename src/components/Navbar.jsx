@@ -30,9 +30,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#08261d]/80 text-white backdrop-blur-xl">
       <div className="section-shell flex h-20 items-center justify-between gap-4">
         <Link to="/" className="flex min-w-0 items-center gap-3">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 text-sm font-bold">
-            SG
-          </span>
+          <img
+            src="/assets/logo-sg-holidays.png"
+            alt="SG Holidays logo"
+            className="h-12 w-12 shrink-0 object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.28)]"
+          />
           <span className="min-w-0">
             <span className="block truncate text-[0.65rem] uppercase tracking-[0.3em] text-emerald-100/60">
               Vagamon

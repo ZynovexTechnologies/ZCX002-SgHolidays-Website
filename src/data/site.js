@@ -1,6 +1,18 @@
 ﻿export const siteConfig = {
   brand: "SG Holidays",
+  siteName: "SG Holidays Vagamon",
+  tagline: "Resort stays, jeep safari rides, and curated Vagamon tour packages.",
   region: "Vagamon, Kerala",
+  country: "India",
+  locale: "en_IN",
+  siteUrl: "",
+  themeColor: "#0B3D2E",
+  defaultOgImage: "/og-sg-holidays.png",
+  defaultOgImageAlt:
+    "SG Holidays Vagamon branded social preview for resort stays, jeep safari, and tour packages.",
+  logoPath: "/assets/logo-sg-holidays.png",
+  businessDescription:
+    "SG Holidays helps guests book Vagamon resort stays, jeep safari rides, honeymoon plans, family packages, and group trips from one contact point.",
   phoneDisplay: "+91 82819 95008",
   phoneDigits: "918281995008",
   email: "sgholidaysvagamon@gmail.com",

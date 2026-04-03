@@ -1,0 +1,24 @@
+{
+  "name": "SG Holidays Vagamon",
+  "short_name": "SG Holidays",
+  "description": "Resort stays, jeep safari rides, and curated tour packages in Vagamon, Kerala.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#08261d",
+  "theme_color": "#0B3D2E",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo-sg-holidays.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
