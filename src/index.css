@@ -112,7 +112,7 @@ textarea {
 }
 
 .section-shell {
-  width: min(1200px, 92vw);
+  width: min(1280px, calc(100vw - 2rem));
   margin-inline: auto;
 }
 
@@ -264,6 +264,10 @@ textarea {
 }
 
 @media (min-width: 768px) {
+  .section-shell {
+    width: min(1280px, calc(100vw - 3rem));
+  }
+
   .section-space {
     padding-block: 6.5rem;
   }

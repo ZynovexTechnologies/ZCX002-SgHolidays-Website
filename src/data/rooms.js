@@ -2,13 +2,20 @@
   {
     id: "luxury-rooms",
     name: "Luxury Rooms",
-    label: "Signature stay",
-    price: "From ₹6,900 / night",
-    capacity: "2 Guests",
+    label: "Best-selling stay",
+    price: "From ₹4,500 / room",
+    capacity: "Up to 3 Guests",
     description:
-      "A premium couple-friendly stay with warm interiors, valley-facing windows, and a calm resort atmosphere.",
-    features: ["Balcony seating", "Attached bath", "Freshup support", "Scenic view access"],
-    image: "/assets/room-suite-1.jpg",
+      "A value-forward luxury room for couples, small families, and friends who want a cleaner Vagamon stay with the key comforts already covered before they enquire.",
+    features: [
+      "WiFi",
+      "Pool access",
+      "Parking",
+      "Balcony view",
+      "Hot water",
+      "Breakfast included",
+    ],
+    image: "/assets/sg-holidays-premium-bedroom.jpg",
   },
   {
     id: "private-rooms",
@@ -19,7 +26,7 @@
     description:
       "Clean and comfortable rooms for small families or friends who want privacy without stretching the budget.",
     features: ["Private check-in", "Hot water", "Parking access", "Fast booking support"],
-    image: "/assets/room-deluxe-1.jpg",
+    image: "/assets/sg-holidays-deluxe-bedroom.jpg",
   },
   {
     id: "pool-rooms",
@@ -30,7 +37,7 @@
     description:
       "A more premium option for guests who want better leisure value, wider room layouts, and a stronger resort feel.",
     features: ["Premium ambience", "Relaxed privacy", "Ideal for couples", "Quick activity access"],
-    image: "/assets/room-suite-2.jpg",
+    image: "/assets/sg-holidays-pool-view.jpg",
   },
   {
     id: "cottages",
@@ -56,18 +63,31 @@
   },
 ];
 
+export const resortHeroBackgrounds = [
+  "/assets/sg-holidays-premium-bedroom.jpg",
+  "/assets/sg-holidays-deluxe-bedroom.jpg",
+  "/assets/sg-holidays-pool-view.jpg",
+  "/assets/sg-holidays-valley-balcony.jpg",
+  "/assets/sg-holidays-resort-exterior.jpg",
+];
+
 export const resortFeatures = [
   {
-    title: "Freshup Support",
+    title: "Luxury Room Inclusions",
     description:
-      "Ideal for early arrivals, quick turnarounds, or guests heading out for safari before room handover.",
-    points: ["Useful for group trips", "Simple check-in coordination", "Flexible planning support"],
+      "The main room offer is built to answer the first booking questions immediately: price, guest fit, and everyday comfort.",
+    points: [
+      "From ₹4,500 per room",
+      "Fits up to 3 guests",
+      "WiFi and hot water included",
+      "Breakfast included",
+    ],
   },
   {
-    title: "Scenic Views",
+    title: "Resort Comfort",
     description:
-      "The stay experience leans into Vagamon’s greenery with view points, sit-out areas, and peaceful mornings.",
-    points: ["Valley-facing pockets", "Calm photo moments", "Nature-led atmosphere"],
+      "The stay sells better because the room is backed by practical property amenities, not just bedroom photos.",
+    points: ["Pool access", "Parking on site", "Balcony-facing hill views", "Fast WhatsApp booking support"],
   },
 ];
 
@@ -86,33 +106,43 @@ export const resortExtras = [
 
 export const resortGallery = [
   {
-    src: "/assets/hero-forest-cabin.jpg",
-    alt: "Exterior stay view in greenery",
-    caption: "Stay zones designed around Vagamon’s calm weather.",
+    src: "/assets/sg-holidays-resort-exterior.jpg",
+    alt: "SG Holidays resort exterior with pool at dusk",
+    caption: "The property exterior gives guests a clear first impression before booking.",
   },
   {
-    src: "/assets/room-deluxe-1.jpg",
-    alt: "Private room interior",
-    caption: "Comfort stays for quick getaways and family plans.",
+    src: "/assets/sg-holidays-premium-bedroom.jpg",
+    alt: "Premium bedroom interior at SG Holidays",
+    caption: "Luxury rooms are designed for up to 3 guests without losing the premium feel.",
   },
   {
-    src: "/assets/room-suite-2.jpg",
-    alt: "Premium suite layout",
-    caption: "Upgraded rooms for premium leisure stays.",
+    src: "/assets/sg-holidays-deluxe-bedroom.jpg",
+    alt: "Deluxe bedroom with valley-facing window",
+    caption: "Private rooms work well for couples, short breaks, and quick weekend plans.",
   },
   {
-    src: "/assets/room-family-1.jpg",
-    alt: "Family cottage setup",
-    caption: "Spacious cottage formats for group comfort.",
+    src: "/assets/sg-holidays-living-room.jpg",
+    alt: "Living room area inside the resort suite",
+    caption: "Lounge spaces add more breathing room for longer or more premium stays.",
   },
   {
-    src: "/assets/room-family-2.jpg",
-    alt: "Large stay layout for groups",
-    caption: "Dorm and group-friendly stay options available.",
+    src: "/assets/sg-holidays-suite-lounge.jpg",
+    alt: "Suite lounge seating area at SG Holidays",
+    caption: "Shared seating corners make the room feel more complete than a standard stay.",
   },
   {
-    src: "/assets/room-suite-1.jpg",
-    alt: "Scenic resort room",
-    caption: "Relaxed resort ambience that supports both rest and adventure.",
+    src: "/assets/sg-holidays-bathroom.jpg",
+    alt: "Attached bathroom inside an SG Holidays room",
+    caption: "Hot water and attached bath comfort matter because guests notice the practical details first.",
+  },
+  {
+    src: "/assets/sg-holidays-pool-view.jpg",
+    alt: "Pool at SG Holidays overlooking Vagamon hills",
+    caption: "Pool access adds visible value to a luxury room that starts from ₹4,500.",
+  },
+  {
+    src: "/assets/sg-holidays-valley-balcony.jpg",
+    alt: "Balcony with panoramic valley view at SG Holidays",
+    caption: "Balcony-facing valley views are one of the strongest reasons guests choose this room category.",
   },
 ];

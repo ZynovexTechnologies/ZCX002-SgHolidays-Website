@@ -26,11 +26,11 @@ export default function Footer() {
             SG Holidays Vagamon
           </p>
           <h2 className="mt-4 max-w-xl text-balance text-3xl font-semibold leading-tight">
-            Resort stays, jeep safari rides, and custom Vagamon plans from one team.
+            Luxury rooms, jeep safari rides, and custom Vagamon plans from one team.
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/70">
-            Premium where it should feel premium. Flexible where travelers need fast answers.
-            That is the business flow this site is built to support.
+            Luxury rooms from ₹4,500 per room with WiFi, pool access, parking, balcony views, hot
+            water, and breakfast. Flexible where travelers need fast answers.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a

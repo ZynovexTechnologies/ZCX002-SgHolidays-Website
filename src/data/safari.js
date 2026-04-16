@@ -107,3 +107,11 @@ export const safariGallery = [
     caption: "Multiple route moods depending on guest type and timing.",
   },
 ];
+
+export const safariHeroBackgrounds = [
+  "/assets/hero-safari-jeep.jpg",
+  "/assets/hero-safari-savanna.jpg",
+  "/assets/wildlife-bird.jpg",
+  "/assets/forest-river.jpg",
+  "/assets/wildlife-elephant.jpg",
+];

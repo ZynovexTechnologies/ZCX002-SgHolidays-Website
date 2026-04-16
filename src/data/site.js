@@ -1,7 +1,7 @@
 ﻿export const siteConfig = {
   brand: "SG Holidays",
   siteName: "SG Holidays Vagamon",
-  tagline: "Resort stays, jeep safari rides, and curated Vagamon tour packages.",
+  tagline: "Luxury rooms, jeep safari rides, and curated Vagamon tour packages.",
   region: "Vagamon, Kerala",
   country: "India",
   locale: "en_IN",
@@ -12,7 +12,7 @@
     "SG Holidays Vagamon branded social preview for resort stays, jeep safari, and tour packages.",
   logoPath: "/assets/logo-sg-holidays.png",
   businessDescription:
-    "SG Holidays helps guests book Vagamon resort stays, jeep safari rides, honeymoon plans, family packages, and group trips from one contact point.",
+    "SG Holidays helps guests book luxury rooms in Vagamon from ₹4,500 per room for up to 3 guests, with WiFi, pool access, parking, balcony views, hot water, breakfast, jeep safari rides, and curated holiday packages from one contact point.",
   phoneDisplay: "+91 82819 95008",
   phoneDigits: "918281995008",
   email: "sgholidaysvagamon@gmail.com",
@@ -49,9 +49,9 @@ export const socials = [
 
 export const homeHighlights = [
   {
-    title: "Luxury Resort",
+    title: "Luxury Rooms",
     description:
-      "Premium hill-facing stays with private room options, cottages, and quiet corners built for comfort.",
+      "Luxury rooms from ₹4,500 per room for up to 3 guests, with WiFi, pool access, parking, balcony view, hot water, and breakfast.",
     tag: "Stay",
     to: "/resort",
   },
@@ -69,6 +69,13 @@ export const homeHighlights = [
     tag: "Adventure",
     to: "/safari",
   },
+];
+
+export const homeHeroBackgrounds = [
+  "/assets/sg-holidays-resort-exterior.jpg",
+  "/assets/sg-holidays-valley-balcony.jpg",
+  "/assets/sg-holidays-pool-view.jpg",
+  "/assets/sg-holidays-premium-bedroom.jpg",
 ];
 
 export const testimonials = [
@@ -94,23 +101,30 @@ export const testimonials = [
 
 export const instagramPreview = [
   {
-    src: "/assets/hero-forest-cabin.jpg",
-    alt: "Hill-view stay at SG Holidays in Vagamon",
-    caption: "Premium stays with valley-facing energy.",
+    src: "/assets/sg-holidays-resort-exterior.jpg",
+    alt: "SG Holidays resort exterior at dusk in Vagamon",
+    caption: "A real property exterior that guests can recognize on arrival.",
   },
   {
-    src: "/assets/hero-safari-jeep.jpg",
-    alt: "Jeep safari ride through scenic Vagamon trails",
-    caption: "Off-road mornings built for Vagamon weather.",
+    src: "/assets/sg-holidays-valley-balcony.jpg",
+    alt: "Valley-facing balcony view from SG Holidays",
+    caption: "Wide hill views that turn the stay into more than just a room booking.",
   },
   {
-    src: "/assets/room-suite-1.jpg",
-    alt: "Luxury room interior at SG Holidays",
-    caption: "Comfort-first rooms for couples and families.",
+    src: "/assets/sg-holidays-pool-view.jpg",
+    alt: "Pool view at SG Holidays with surrounding Vagamon hills",
+    caption: "Poolside leisure framed by the Vagamon hillside.",
   },
   {
-    src: "/assets/forest-river.jpg",
-    alt: "Green landscape near Vagamon attractions",
-    caption: "Nature-heavy stops between activity points.",
+    src: "/assets/sg-holidays-premium-bedroom.jpg",
+    alt: "Premium bedroom interior at SG Holidays",
+    caption: "Warm room styling that suits couples and premium leisure stays.",
   },
+];
+
+export const contactHeroBackgrounds = [
+  "/assets/sg-holidays-valley-balcony.jpg",
+  "/assets/sg-holidays-resort-exterior.jpg",
+  "/assets/sg-holidays-pool-view.jpg",
+  "/assets/sg-holidays-premium-bedroom.jpg",
 ];

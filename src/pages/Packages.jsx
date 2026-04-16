@@ -1,6 +1,6 @@
 ﻿import Hero from "../components/Hero.jsx";
 import PackageCard from "../components/PackageCard.jsx";
-import { packages } from "../data/packages.js";
+import { packageHeroBackgrounds, packages } from "../data/packages.js";
 import { siteConfig } from "../data/site.js";
 
 export default function Packages() {
@@ -13,8 +13,9 @@ export default function Packages() {
         description="The packages page is where the business can position itself as more than a room provider. Each package combines duration, activities, and pricing into a simpler buying decision for guests who want a complete Vagamon plan."
         primaryAction={{ label: "Plan My Package", to: "/contact?service=Couple%20Package" }}
         secondaryAction={{ label: "WhatsApp Booking", href: siteConfig.whatsappLink, external: true, variant: "light" }}
-        image="/assets/room-family-1.jpg"
-        imageAlt="Tour package experience with stay and sightseeing"
+        backgroundImages={packageHeroBackgrounds}
+        image="/assets/sg-holidays-pool-view.jpg"
+        imageAlt="Poolside resort experience at SG Holidays in Vagamon"
         imageNote="Package pages help move undecided users into enquiry with clearer structure and higher perceived value."
       />
 

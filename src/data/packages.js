@@ -13,7 +13,7 @@
       "Campfire setup on request",
       "Sightseeing coordination",
     ],
-    image: "/assets/room-suite-1.jpg",
+    image: "/assets/sg-holidays-valley-balcony.jpg",
     featured: true,
   },
   {
@@ -30,7 +30,7 @@
       "Adventure park stop",
       "Bonfire evening add-on",
     ],
-    image: "/assets/room-family-1.jpg",
+    image: "/assets/sg-holidays-suite-lounge.jpg",
     featured: true,
   },
   {
@@ -47,7 +47,7 @@
       "Decor support on request",
       "Tailored local sightseeing",
     ],
-    image: "/assets/room-suite-2.jpg",
+    image: "/assets/sg-holidays-premium-bedroom.jpg",
     featured: true,
   },
   {
@@ -64,9 +64,11 @@
       "DJ music setup",
       "Campfire and group coordination",
     ],
-    image: "/assets/room-family-2.jpg",
+    image: "/assets/sg-holidays-resort-exterior.jpg",
     featured: false,
   },
 ];
 
 export const featuredPackages = packages.filter((item) => item.featured);
+
+export const packageHeroBackgrounds = packages.map((item) => item.image);

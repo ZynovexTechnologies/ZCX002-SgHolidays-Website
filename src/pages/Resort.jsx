@@ -1,7 +1,13 @@
 ﻿import Hero from "../components/Hero.jsx";
 import RoomCard from "../components/RoomCard.jsx";
 import Gallery from "../components/Gallery.jsx";
-import { resortExtras, resortFeatures, resortGallery, rooms } from "../data/rooms.js";
+import {
+  resortExtras,
+  resortFeatures,
+  resortGallery,
+  resortHeroBackgrounds,
+  rooms,
+} from "../data/rooms.js";
 import { siteConfig } from "../data/site.js";
 
 export default function Resort() {
@@ -9,14 +15,15 @@ export default function Resort() {
     <main>
       <Hero
         compact
-        eyebrow="Resort stays in Vagamon"
-        title="Stay in Vagamon With More Comfort, Better Views, and Flexible Booking Support"
-        description="SG Holidays offers multiple stay formats across luxury rooms, private rooms, pool rooms, cottages, and budget-friendly dormitory options so couples, families, and groups can all fit into the same business ecosystem."
+        eyebrow="Luxury resort rooms in Vagamon"
+        title="Luxury Rooms With WiFi, Pool Access, Balcony Views, and Breakfast"
+        description="SG Holidays offers luxury rooms from ₹4,500 per room for up to 3 guests, with WiFi, parking, hot water, breakfast, and balcony-facing hill views, alongside flexible stay options for families and groups."
         primaryAction={{ label: "Book Now", to: "/contact?service=Resort%20Stay" }}
         secondaryAction={{ label: "WhatsApp Booking", href: siteConfig.whatsappLink, external: true, variant: "light" }}
-        image="/assets/room-suite-1.jpg"
-        imageAlt="Premium resort stay in Vagamon"
-        imageNote="The resort page focuses on accommodation depth, pricing clarity, and upsell-ready extras."
+        backgroundImages={resortHeroBackgrounds}
+        image="/assets/sg-holidays-premium-bedroom.jpg"
+        imageAlt="Premium bedroom stay at SG Holidays in Vagamon"
+        imageNote="The resort page should make the main room offer obvious: price, guest count, inclusions, and fast booking support."
       />
 
       <section className="section-space">
@@ -26,7 +33,7 @@ export default function Resort() {
               Accommodation Types
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-[#0b271f] md:text-5xl">
-              Room formats that serve premium leisure travelers and budget-conscious groups.
+              Luxury rooms from ₹4,500 per room, plus flexible stay options for families and groups.
             </h2>
           </div>
 
@@ -95,7 +102,7 @@ export default function Resort() {
               Pricing Snapshot
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight md:text-5xl">
-              Pricing cards that reduce guesswork before the enquiry starts.
+              Clear pricing, guest capacity, and room positioning before the enquiry starts.
             </h2>
           </div>
 
@@ -140,7 +147,7 @@ export default function Resort() {
                   Book Your Stay
                 </p>
                 <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight md:text-4xl">
-                  Choose the stay type now and let the team lock the right room before your dates move.
+                  Share your dates and the team can lock the right luxury room or group stay quickly.
                 </h2>
               </div>
               <div className="cta-row">

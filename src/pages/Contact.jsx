@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { FiCalendar, FiChevronDown, FiMail, FiPhoneCall } from "react-icons/fi";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Hero from "../components/Hero.jsx";
-import { serviceOptions, siteConfig } from "../data/site.js";
+import { contactHeroBackgrounds, serviceOptions, siteConfig } from "../data/site.js";
 
 const initialFormState = {
   name: "",
@@ -115,8 +115,9 @@ export default function Contact() {
         description="The contact page is built to remove friction. It surfaces the phone number, WhatsApp, social proof channels, map, and a quick enquiry form that feeds directly into WhatsApp."
         primaryAction={{ label: "Call Now", href: siteConfig.callLink }}
         secondaryAction={{ label: "WhatsApp Booking", href: siteConfig.whatsappLink, external: true, variant: "light" }}
-        image="/assets/hero-safari-savanna.jpg"
-        imageAlt="Contact SG Holidays for Vagamon bookings"
+        backgroundImages={contactHeroBackgrounds}
+        image="/assets/sg-holidays-valley-balcony.jpg"
+        imageAlt="Valley view from SG Holidays in Vagamon"
         imageNote="Direct-response tourism sites should never hide contact actions behind a form alone."
       />
 

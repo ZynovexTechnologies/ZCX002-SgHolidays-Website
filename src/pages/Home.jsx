@@ -3,39 +3,47 @@ import Hero from "../components/Hero.jsx";
 import PackageCard from "../components/PackageCard.jsx";
 import Gallery from "../components/Gallery.jsx";
 import { featuredPackages } from "../data/packages.js";
-import { homeHighlights, instagramPreview, siteConfig, testimonials } from "../data/site.js";
+import {
+  homeHeroBackgrounds,
+  homeHighlights,
+  instagramPreview,
+  siteConfig,
+  testimonials,
+} from "../data/site.js";
 
 export default function Home() {
   return (
     <main>
       <Hero
-        eyebrow="Premium Vagamon resort, safari and tours"
-        title="Experience Vagamon Like Never Before"
-        description="SG Holidays combines premium resort stays, budget-friendly dormitory options, jeep safari rides, and curated tour packages for couples, families, and groups who want one reliable booking partner in Vagamon."
+        eyebrow="Luxury rooms, safari and Vagamon tours"
+        title="Luxury Rooms in Vagamon With Pool, Balcony Views, and Breakfast"
+        description="SG Holidays leads with luxury rooms from ₹4,500 per room for up to 3 guests, with WiFi, pool access, parking, balcony views, hot water, and breakfast, while also handling jeep safari rides and curated holiday packages from the same team."
         primaryAction={{ label: "Book Stay", to: "/contact?service=Resort%20Stay" }}
         secondaryAction={{ label: "Book Jeep Safari", to: "/contact?service=Jeep%20Safari", variant: "light" }}
+        backgroundImages={homeHeroBackgrounds}
         stats={[
-          { label: "Stay", value: "Resort + Dormitory" },
-          { label: "Safari", value: "Sunrise & Sunset" },
-          { label: "Packages", value: "Couple to Office Tours" },
+          { label: "Price", value: "From ₹4,500 / room" },
+          { label: "Capacity", value: "Up to 3 Guests" },
+          { label: "Included", value: "WiFi, Pool, Breakfast" },
         ]}
-        image="/assets/hero-forest-cabin.jpg"
-        imageAlt="Scenic SG Holidays stay in Vagamon"
-        imageNote="A business built around three conversion points: stay bookings, safari bookings, and package enquiries."
+        image="/assets/sg-holidays-resort-exterior.jpg"
+        imageAlt="SG Holidays resort exterior in Vagamon"
+        imageNote="The clearest room offer should surface pricing, guest count, and inclusions before the enquiry starts."
       />
 
       <section className="section-space">
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr,1.1fr] lg:items-end">
-          <div className="max-w-xl">
+        <div className="section-shell grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-end">
+          <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.26em] text-[#6b736e]">
               Highlights
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-[#0b271f] md:text-5xl">
-              Stay, explore, and book everything faster with one Vagamon team.
+              Start with the room offer most guests ask about, then add the rest of the trip.
             </h2>
             <p className="mt-5 text-base leading-7 text-[#485851] md:text-lg">
-              This homepage is designed to route visitors into the correct business funnel quickly:
-              stay bookings, safari reservations, or holiday package planning.
+              The homepage now makes the core stay product obvious first: luxury rooms with clear
+              price, guest capacity, and inclusions, followed by safari bookings and package
+              planning.
             </p>
             <Link to="/packages" className="btn-secondary mt-8">
               View Featured Packages

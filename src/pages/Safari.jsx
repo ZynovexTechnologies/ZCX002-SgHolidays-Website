@@ -1,7 +1,13 @@
 ﻿import Hero from "../components/Hero.jsx";
 import SafariCard from "../components/SafariCard.jsx";
 import Gallery from "../components/Gallery.jsx";
-import { safariGallery, safariPackages, safariRides, sightseeingSpots } from "../data/safari.js";
+import {
+  safariGallery,
+  safariHeroBackgrounds,
+  safariPackages,
+  safariRides,
+  sightseeingSpots,
+} from "../data/safari.js";
 import { siteConfig } from "../data/site.js";
 
 export default function Safari() {
@@ -14,6 +20,7 @@ export default function Safari() {
         description="The safari page is structured to sell both timing-based rides and full sightseeing value. It covers sunrise and sunset experiences, the stop list, and package-based reservation options without making the user hunt for next steps."
         primaryAction={{ label: "Reserve Safari", to: "/contact?service=Jeep%20Safari" }}
         secondaryAction={{ label: "WhatsApp Booking", href: siteConfig.whatsappLink, external: true, variant: "light" }}
+        backgroundImages={safariHeroBackgrounds}
         image="/assets/hero-safari-jeep.jpg"
         imageAlt="Jeep safari in Vagamon"
         imageNote="Adventure, scenery, and direct booking intent all need to show up above the fold."
