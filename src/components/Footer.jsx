@@ -26,11 +26,12 @@ export default function Footer() {
             SG Holidays Vagamon
           </p>
           <h2 className="mt-4 max-w-xl text-balance text-3xl font-semibold leading-tight">
-            Luxury rooms, jeep safari rides, and custom Vagamon plans from one team.
+            Homestay, cottage, villa stays, jeep safari rides, and custom Vagamon plans from one team.
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/70">
-            Luxury rooms from ₹4,500 per room with WiFi, pool access, parking, balcony views, hot
-            water, and breakfast. Flexible where travelers need fast answers.
+            4 BHK home stay, 2 bedroom cottage, and private villa options with balcony views,
+            privacy, breakfast, kitchen access, and fast booking support where travelers need quick
+            answers.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a

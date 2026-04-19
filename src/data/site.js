@@ -1,7 +1,7 @@
-﻿export const siteConfig = {
+export const siteConfig = {
   brand: "SG Holidays",
   siteName: "SG Holidays Vagamon",
-  tagline: "Luxury rooms, jeep safari rides, and curated Vagamon tour packages.",
+  tagline: "Homestay, cottage, villa stays, jeep safari rides, and curated Vagamon tour packages.",
   region: "Vagamon, Kerala",
   country: "India",
   locale: "en_IN",
@@ -12,7 +12,7 @@
     "SG Holidays Vagamon branded social preview for resort stays, jeep safari, and tour packages.",
   logoPath: "/assets/logo-sg-holidays.png",
   businessDescription:
-    "SG Holidays helps guests book luxury rooms in Vagamon from ₹4,500 per room for up to 3 guests, with WiFi, pool access, parking, balcony views, hot water, breakfast, jeep safari rides, and curated holiday packages from one contact point.",
+    "SG Holidays helps guests book a 4 BHK home stay for up to 15 guests, a 2 bedroom cottage for up to 6 guests, and a private 4 bedroom villa for up to 14 guests in Vagamon, alongside jeep safari rides and curated holiday packages from one contact point.",
   phoneDisplay: "+91 82819 95008",
   phoneDigits: "918281995008",
   email: "sgholidaysvagamon@gmail.com",
@@ -49,33 +49,33 @@ export const socials = [
 
 export const homeHighlights = [
   {
-    title: "Luxury Rooms",
+    title: "Group Stay Options",
     description:
-      "Luxury rooms from ₹4,500 per room for up to 3 guests, with WiFi, pool access, parking, balcony view, hot water, and breakfast.",
+      "Choose between a 4 BHK home stay for up to 15 guests and a private 4 bedroom villa for up to 14 guests, both built for stronger privacy.",
     tag: "Stay",
     to: "/resort",
   },
   {
-    title: "Budget Dormitory",
+    title: "2 Bedroom Cottage",
     description:
-      "Affordable group-friendly dorm spaces that keep school tours, office trips, and backpacking plans simple.",
-    tag: "Groups",
+      "A plantation-facing cottage for up to 6 guests with WiFi, breakfast, dining area, and a quieter Vagamon mood.",
+    tag: "Cottage",
     to: "/resort",
   },
   {
     title: "Jeep Safari",
     description:
-      "Sunrise and sunset off-road drives covering Vagamon’s scenic spots, pine forest trails, and activity stops.",
+      "Scenic jeep routes covering Vagamon sightseeing, pilgrimage hills, Idukki viewpoints, and Ulupunni off-road stretches.",
     tag: "Adventure",
     to: "/safari",
   },
 ];
 
 export const homeHeroBackgrounds = [
-  "/assets/sg-holidays-resort-exterior.jpg",
-  "/assets/sg-holidays-valley-balcony.jpg",
-  "/assets/sg-holidays-pool-view.jpg",
-  "/assets/sg-holidays-premium-bedroom.jpg",
+  "/assets/sg-holidays-villa-exterior-front.jpeg",
+  "/assets/sg-holidays-tea-estate-view.jpeg",
+  "/assets/sg-holidays-covered-balcony-view.jpeg",
+  "/assets/sg-holidays-living-dining-room.jpeg",
 ];
 
 export const testimonials = [
@@ -101,30 +101,30 @@ export const testimonials = [
 
 export const instagramPreview = [
   {
-    src: "/assets/sg-holidays-resort-exterior.jpg",
-    alt: "SG Holidays resort exterior at dusk in Vagamon",
-    caption: "A real property exterior that guests can recognize on arrival.",
+    src: "/assets/sg-holidays-villa-exterior-front.jpeg",
+    alt: "Front exterior of the SG Holidays villa in Vagamon",
+    caption: "The villa exterior sets the tone for private group stays before the enquiry even starts.",
   },
   {
-    src: "/assets/sg-holidays-valley-balcony.jpg",
-    alt: "Valley-facing balcony view from SG Holidays",
-    caption: "Wide hill views that turn the stay into more than just a room booking.",
+    src: "/assets/sg-holidays-covered-balcony-view.jpeg",
+    alt: "Covered balcony view from the SG Holidays property",
+    caption: "Balcony-facing hill views are one of the easiest reasons the stay mix feels premium.",
   },
   {
-    src: "/assets/sg-holidays-pool-view.jpg",
-    alt: "Pool view at SG Holidays with surrounding Vagamon hills",
-    caption: "Poolside leisure framed by the Vagamon hillside.",
+    src: "/assets/sg-holidays-tea-estate-view.jpeg",
+    alt: "Tea estate view from the SG Holidays cottage side",
+    caption: "Tea plantation scenery gives the cottage offer a clearer Vagamon identity.",
   },
   {
-    src: "/assets/sg-holidays-premium-bedroom.jpg",
-    alt: "Premium bedroom interior at SG Holidays",
-    caption: "Warm room styling that suits couples and premium leisure stays.",
+    src: "/assets/sg-holidays-living-dining-room.jpeg",
+    alt: "Living and dining space inside the SG Holidays homestay",
+    caption: "Shared interiors help larger families picture the stay as a full-property booking.",
   },
 ];
 
 export const contactHeroBackgrounds = [
-  "/assets/sg-holidays-valley-balcony.jpg",
-  "/assets/sg-holidays-resort-exterior.jpg",
-  "/assets/sg-holidays-pool-view.jpg",
-  "/assets/sg-holidays-premium-bedroom.jpg",
+  "/assets/sg-holidays-covered-balcony-view.jpeg",
+  "/assets/sg-holidays-villa-exterior-front.jpeg",
+  "/assets/sg-holidays-tea-estate-view.jpeg",
+  "/assets/sg-holidays-living-dining-room.jpeg",
 ];

@@ -15,20 +15,20 @@ export default function Home() {
   return (
     <main>
       <Hero
-        eyebrow="Luxury rooms, safari and Vagamon tours"
-        title="Luxury Rooms in Vagamon With Pool, Balcony Views, and Breakfast"
-        description="SG Holidays leads with luxury rooms from ₹4,500 per room for up to 3 guests, with WiFi, pool access, parking, balcony views, hot water, and breakfast, while also handling jeep safari rides and curated holiday packages from the same team."
+        eyebrow="Homestay, cottage, safari and Vagamon tours"
+        title="Homestay, Cottage, and Private Villa Stays in Vagamon"
+        description="SG Holidays leads with three stay formats: a 4 BHK home stay for up to 15 guests, a 2 bedroom cottage for up to 6 guests, and a private 4 bedroom villa for up to 14 guests, while also handling jeep safari rides and curated holiday packages from the same team."
         primaryAction={{ label: "Book Stay", to: "/contact?service=Resort%20Stay" }}
         secondaryAction={{ label: "Book Jeep Safari", to: "/contact?service=Jeep%20Safari", variant: "light" }}
         backgroundImages={homeHeroBackgrounds}
         stats={[
-          { label: "Price", value: "From ₹4,500 / room" },
-          { label: "Capacity", value: "Up to 3 Guests" },
-          { label: "Included", value: "WiFi, Pool, Breakfast" },
+          { label: "Stay Types", value: "Home Stay, Cottage, Villa" },
+          { label: "Capacity", value: "Up to 15 Guests" },
+          { label: "Starting From", value: "₹8,000 / stay" },
         ]}
-        image="/assets/sg-holidays-resort-exterior.jpg"
-        imageAlt="SG Holidays resort exterior in Vagamon"
-        imageNote="The clearest room offer should surface pricing, guest count, and inclusions before the enquiry starts."
+        image="/assets/sg-holidays-villa-exterior-front.jpeg"
+        imageAlt="SG Holidays villa exterior in Vagamon"
+        imageNote="The clearest stay offer should surface the stay type, group size, and what the property experience actually feels like."
       />
 
       <section className="section-space">
@@ -38,12 +38,11 @@ export default function Home() {
               Highlights
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-[#0b271f] md:text-5xl">
-              Start with the room offer most guests ask about, then add the rest of the trip.
+              Start with the stay type guests actually need, then add the rest of the trip.
             </h2>
             <p className="mt-5 text-base leading-7 text-[#485851] md:text-lg">
-              The homepage now makes the core stay product obvious first: luxury rooms with clear
-              price, guest capacity, and inclusions, followed by safari bookings and package
-              planning.
+              The homepage now makes the core stay lineup obvious first: private group stays,
+              plantation-facing cottage comfort, and then safari bookings and package planning.
             </p>
             <Link to="/packages" className="btn-secondary mt-8">
               View Featured Packages

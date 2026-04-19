@@ -15,15 +15,15 @@ export default function Resort() {
     <main>
       <Hero
         compact
-        eyebrow="Luxury resort rooms in Vagamon"
-        title="Luxury Rooms With WiFi, Pool Access, Balcony Views, and Breakfast"
-        description="SG Holidays offers luxury rooms from ₹4,500 per room for up to 3 guests, with WiFi, parking, hot water, breakfast, and balcony-facing hill views, alongside flexible stay options for families and groups."
+        eyebrow="Homestay, cottage, and private villa stays in Vagamon"
+        title="4 BHK Home Stay, 2 Bedroom Cottage, and Private Villa Options"
+        description="SG Holidays now highlights three clear stay formats: a 4 BHK home stay for up to 15 guests, a 2 bedroom cottage for up to 6 guests, and a private villa with 4 bedrooms for up to 14 guests."
         primaryAction={{ label: "Book Now", to: "/contact?service=Resort%20Stay" }}
         secondaryAction={{ label: "WhatsApp Booking", href: siteConfig.whatsappLink, external: true, variant: "light" }}
         backgroundImages={resortHeroBackgrounds}
-        image="/assets/sg-holidays-premium-bedroom.jpg"
-        imageAlt="Premium bedroom stay at SG Holidays in Vagamon"
-        imageNote="The resort page should make the main room offer obvious: price, guest count, inclusions, and fast booking support."
+        image="/assets/sg-holidays-villa-exterior-front.jpeg"
+        imageAlt="Private villa stay at SG Holidays in Vagamon"
+        imageNote="The resort page should make the stay lineup obvious first: type, guest capacity, price range, and the practical inclusions guests actually compare."
       />
 
       <section className="section-space">
@@ -33,7 +33,7 @@ export default function Resort() {
               Accommodation Types
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-[#0b271f] md:text-5xl">
-              Luxury rooms from ₹4,500 per room, plus flexible stay options for families and groups.
+              Three stay types built for different group sizes, view preferences, and privacy needs.
             </h2>
           </div>
 
@@ -77,7 +77,7 @@ export default function Resort() {
               Extras
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-[#0b271f] md:text-5xl">
-              Add-on moments that help the stay convert into a full experience.
+              The strongest advantages are the setting, group fit, and how private each stay feels.
             </h2>
           </div>
 
@@ -102,11 +102,11 @@ export default function Resort() {
               Pricing Snapshot
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight md:text-5xl">
-              Clear pricing, guest capacity, and room positioning before the enquiry starts.
+              Let guests compare the stay type, starting price, and capacity before they enquire.
             </h2>
           </div>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {rooms.map((room) => (
               <article
                 key={room.id}
@@ -129,7 +129,7 @@ export default function Resort() {
               Image Gallery
             </p>
             <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight text-[#0b271f] md:text-5xl">
-              Visual proof for room quality, group fit, and resort atmosphere.
+              Real property photos for the interiors, balcony views, tea slopes, and villa exterior.
             </h2>
           </div>
           <div className="mt-10">
@@ -147,7 +147,7 @@ export default function Resort() {
                   Book Your Stay
                 </p>
                 <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight md:text-4xl">
-                  Share your dates and the team can lock the right luxury room or group stay quickly.
+                  Share your dates and guest count first. The team can point you to the right stay type quickly.
                 </h2>
               </div>
               <div className="cta-row">
